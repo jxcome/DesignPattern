@@ -18,6 +18,6 @@ public class File extends AbstractFile {
         for (int i = 0; i < getDepth(); i++)
             System.out.print("\t");
 
-        System.out.println("[FileP] " + getName() + ", Size: " + size);
+        System.out.println("[File] " + getName() + ", Size: " + size);
     }
 }
