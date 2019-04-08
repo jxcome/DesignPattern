@@ -1,4 +1,4 @@
-package com.chloe;
+package com.chloe.solution;
 
 public class Client {
 
