@@ -1,7 +1,5 @@
 package com.chloe;
 
-import java.sql.Driver;
-
 public class Client {
 
     public static void main(String[] args) {

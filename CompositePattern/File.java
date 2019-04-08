@@ -1,5 +1,11 @@
 package com.chloe;
 
+
+/**
+ * 파일의 이름과 그 사이즈를 관리하는 클래스
+ *
+ * @date 2019/04/09
+ */
 public class File {
     private  String name;
     private int size;
