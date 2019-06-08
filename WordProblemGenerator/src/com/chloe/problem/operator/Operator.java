@@ -2,38 +2,32 @@ package com.chloe.problem.operator;
 
 import com.chloe.information.Information;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public abstract class Operator {
-//    ArrayList<String> names = new ArrayList<>();
-//    ArrayList<String> products = new ArrayList<>();
-//    ArrayList<String> values;
-
     Information information;
+    HashMap<String, ArrayList<String>> informationMap;
 
-    String person = "";
-    String product = "";
+    int[] values = new int[2];
 
     public Operator(Information information) {
         this.information = information;
     }
 
     public abstract String createWP();
-    public abstract boolean isCorrect();
+    public abstract boolean isCorrect(double answer);
 
     void setInformations() {
-        HashMap<String, ArrayList<String>> informationMap = information.getInformation();
-        int randIdx;
+        informationMap = information.getInformation();
 
-        //
-        ArrayList<String> informations = informationMap.get("Person");
-        randIdx = (int)(Math.random() * informations.size());
+        ArrayList<String> randNums = new ArrayList<>();
+        for(int i = 0; i < 10; i++) {
+            int randNum = (int)(Math.random() * 10);
+            randNums.add(Integer.toString(randNum));
+        }
 
-        person = informations.get(randIdx);
-
-        informations.clear();
+        informationMap.put("Value", randNums);
     }
 
 }

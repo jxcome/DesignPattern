@@ -1,6 +1,6 @@
 package com.chloe.information;
 
-import com.chloe.Utility;
+import com.chloe.util.Utility;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -22,17 +22,17 @@ public class ProductInformation extends Information{
         if (component != null) component.setInformation();
     }
 
-    @Override
-    public HashMap<String, String> getRandomInfomation() {
-        ArrayList<String> products = informations.get("Product");
-        int randIdx = (int)(Math.random() * informations.size());
-
-        randomInformation.put("Product", products.get(randIdx));
-
-
-        if (component != null)
-            randomInformation.putAll(component.getRandomInfomation());
-
-        return randomInformation;
-    }
+//    @Override
+//    public HashMap<String, String> getRandomInfomation() {
+//        ArrayList<String> products = informations.get("Product");
+//        int randIdx = (int)(Math.random() * informations.size());
+//
+//        randomInformation.put("Product", products.get(randIdx));
+//
+//
+//        if (component != null)
+//            randomInformation.putAll(component.getRandomInfomation());
+//
+//        return randomInformation;
+//    }
 }
