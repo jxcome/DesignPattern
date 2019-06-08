@@ -2,6 +2,9 @@ package com.chloe.information;
 
 import com.chloe.Utility;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class PersonInformation extends Information{
 
     public PersonInformation(Information component) {
@@ -16,5 +19,19 @@ public class PersonInformation extends Information{
         informations.put("Person", inputInformation());
 
         if (component != null) component.setInformation();
+    }
+
+    @Override
+    public HashMap<String, String> getRandomInfomation() {
+        ArrayList<String> persons = informations.get("Person");
+        int randIdx = (int)(Math.random() * informations.size());
+
+        randomInformation.put("Person", persons.get(randIdx));
+
+
+        if (component != null)
+            randomInformation.putAll(component.getRandomInfomation());
+
+        return randomInformation;
     }
 }

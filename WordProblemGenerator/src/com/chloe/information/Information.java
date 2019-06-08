@@ -11,9 +11,12 @@ import java.util.Vector;
 public abstract class Information {
     Information component;
     HashMap<String, ArrayList<String>> informations = new HashMap<>();
+    HashMap<String, String> randomInformation = new HashMap<>();
+
     Scanner scanner = new Scanner(System.in);
 
     public abstract void setInformation();
+    public abstract HashMap<String, String> getRandomInfomation();
 
     public HashMap<String, ArrayList<String>> getInformation() {
         if (component != null) {
