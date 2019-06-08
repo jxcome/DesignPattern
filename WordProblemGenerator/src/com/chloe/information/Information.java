@@ -2,6 +2,7 @@ package com.chloe.information;
 
 import com.chloe.Utility;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 import java.util.Vector;
@@ -9,12 +10,12 @@ import java.util.Vector;
 // Decorator Pattern
 public abstract class Information {
     Information component;
-    HashMap<String, Vector<String>> informations = new HashMap<>();
+    HashMap<String, ArrayList<String>> informations = new HashMap<>();
     Scanner scanner = new Scanner(System.in);
 
     public abstract void setInformation();
 
-    public HashMap<String, Vector<String>> getInformation() {
+    public HashMap<String, ArrayList<String>> getInformation() {
         if (component != null) {
             informations.putAll(component.getInformation());
         }
@@ -22,9 +23,9 @@ public abstract class Information {
         return informations;
     }
 
-    Vector<String> inputInformation() {
+    ArrayList<String> inputInformation() {
         String input = "init";
-        Vector<String> inputs = new Vector<>();
+        ArrayList<String> inputs = new ArrayList<>();
 
         while(true) {
             input = scanner.nextLine();
