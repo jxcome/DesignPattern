@@ -1,8 +1,6 @@
-package com.chloe.problem.template;
+package com.chloe.workSheet.template;
 
 import com.chloe.util.Utility;
-
-import java.util.ArrayList;
 
 public class SumTemplate extends Template {
     public SumTemplate() {
@@ -14,10 +12,5 @@ public class SumTemplate extends Template {
         for (String template: Utility.SUM_TEPLATES) {
             sentences.add(template);
         }
-    }
-
-    @Override
-    public ArrayList<String> getTemplate() {
-        return sentences;
     }
 }

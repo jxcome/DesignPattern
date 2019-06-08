@@ -1,4 +1,4 @@
-package com.chloe.problem.operator;
+package com.chloe.workSheet.operator;
 
 import com.chloe.information.Information;
 import com.chloe.util.Utility;
@@ -16,6 +16,12 @@ public class OperatorFactory {
         switch (type) {
             case Utility.SUM:
                 operator = new SumOperator(information);
+                break;
+            case Utility.SUB:
+                operator = new SubOperator(information);
+                break;
+            case Utility.MUL:
+                operator = new MulOperator(information);
                 break;
             default: operator = new SumOperator(information);
                 break;

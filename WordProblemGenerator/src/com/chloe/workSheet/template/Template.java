@@ -1,4 +1,4 @@
-package com.chloe.problem.template;
+package com.chloe.workSheet.template;
 
 import java.util.ArrayList;
 
@@ -6,5 +6,8 @@ public abstract class Template {
     ArrayList<String> sentences = new ArrayList<>();
 
     public abstract void addTemplate();
-    public abstract ArrayList<String> getTemplate();
+
+    public ArrayList<String> getTemplate() {
+        return sentences;
+    }
 }

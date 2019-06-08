@@ -1,14 +1,14 @@
-package com.chloe.problem.operator;
+package com.chloe.workSheet.operator;
 
-import com.chloe.util.Utility;
 import com.chloe.information.Information;
-import com.chloe.problem.template.SumTemplate;
-import com.chloe.problem.template.Template;
+import com.chloe.workSheet.template.DivTemplate;
+import com.chloe.workSheet.template.Template;
+import com.chloe.util.Utility;
 
 import java.util.ArrayList;
 
-public class SumOperator extends Operator{
-    public SumOperator(Information information) {
+public class DivOperator extends Operator{
+    public DivOperator(Information information) {
         super(information);
     }
 
@@ -16,7 +16,7 @@ public class SumOperator extends Operator{
     public String createWP() {
         setInformations();
 
-        Template template = new SumTemplate();
+        Template template = new DivTemplate();
         ArrayList<String> templates = template.getTemplate();
 
         int randIdx = (int)(Math.random() * templates.size());
@@ -38,7 +38,7 @@ public class SumOperator extends Operator{
 
     @Override
     public boolean isCorrect(double answer) {
-        if (answer == (values[0] + values[1])) return true;
+        if (answer == (values[0] / values[1])) return true;
         else return false;
     }
 }
