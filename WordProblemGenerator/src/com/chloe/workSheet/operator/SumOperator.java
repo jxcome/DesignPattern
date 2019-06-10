@@ -2,6 +2,7 @@ package com.chloe.workSheet.operator;
 
 import com.chloe.util.Utility;
 import com.chloe.information.Information;
+import com.chloe.workSheet.Problem;
 import com.chloe.workSheet.template.SumTemplate;
 import com.chloe.workSheet.template.Template;
 
@@ -13,7 +14,7 @@ public class SumOperator extends Operator{
     }
 
     @Override
-    public String createWP() {
+    public Problem createWP() {
         setInformations();
 
         Template template = new SumTemplate();
@@ -33,11 +34,11 @@ public class SumOperator extends Operator{
             }
         }
 
-        return wordProblem;
+        return new Problem(wordProblem, this);
     }
 
     @Override
     public boolean isCorrect(double answer) {
-        return answer == (values[0] + values[1]);
+        return (int)answer == (values[0] + values[1]);
     }
 }

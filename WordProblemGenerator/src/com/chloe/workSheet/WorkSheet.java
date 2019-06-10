@@ -14,12 +14,6 @@ public class WorkSheet {
         return workSheet;
     }
 
-    private void scoreWorkSheet() {
-        for(Problem problem: workSheet) {
-            if (problem.isCorrect()) score++;
-        }
-    }
-
     public void setScore(int score) {
         this.score = score;
     }

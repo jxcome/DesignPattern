@@ -12,7 +12,7 @@ public class ProductInformation extends Information{
 
     @Override
     public void setInformation() {
-        System.out.println(Utility.WRITE_PRODUCT + Utility.Q_MEAN);
+        System.out.print(Utility.WRITE_PRODUCT + Utility.Q_MEAN);
 
         informations.put("Product", initInformation());
 

@@ -10,7 +10,7 @@ public class OperatorFactory {
         this.information = information;
     }
 
-    public Operator createOperator(int type) {
+    public Operator createOperator(String type) {
         Operator operator;
 
         switch (type) {
@@ -23,9 +23,14 @@ public class OperatorFactory {
             case Utility.MUL:
                 operator = new MulOperator(information);
                 break;
+            case Utility.DIV:
+                operator = new DivOperator(information);
+                break;
             default: operator = new SumOperator(information);
                 break;
         }
+
+
 
         return operator;
     }

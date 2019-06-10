@@ -9,18 +9,32 @@ public class Utility {
 
     public static final String WRITE_PERSON = "자녀에게 중요한 사람들의 이름을 입력하세요.\n";
     public static final String WRITE_PRODUCT = "자녀에게 중요한 물품들을 입력하세요.\n";
+    public static final String WRITE_OPERATOR = "연산자의 종류를 입력하세요\n";
+    public static final String WRITE_NUM_OF_PROBLEM = "문제 개수를 입력하세요\n";
 
-    public static final String WRITE_ANWSER = "------------정답을 입력하세요----------\n";
+    public static final String START = "------------문제 풀이를 시작합니다.----------\n";
+    public static final String WRITE_ANWSER = "정답을 입력하세요 > ";
+
+    public static final String SCORE = "총 점수 = ";
+
     public static final String ASK_MORE_WORKSHEET = "프로그램을 종료하겠습니까? Y/N\n";
 
     public static final ArrayList<String> YES = new ArrayList<>(
             Arrays.asList("Y", "y")
     );
+    public static final ArrayList<String> NO = new ArrayList<>(
+            Arrays.asList("N", "n")
+    );
 
-    public static final int SUM = 0;
-    public static final int SUB = 1;
-    public static final int MUL = 2;
-    public static final int DIV = 3;
+    public static final String SUM = "+";
+    public static final String SUB = "-";
+    public static final String MUL = "*";
+    public static final String DIV = "/";
+
+//    public static final int SUM = 0;
+//    public static final int SUB = 1;
+//    public static final int MUL = 2;
+//    public static final int DIV = 3;
 
     public static final String[][] OLD_STRINGS = {
             {"#person1", "Person"}, {"#product", "Product"},

@@ -1,6 +1,7 @@
 package com.chloe.workSheet.operator;
 
 import com.chloe.information.Information;
+import com.chloe.workSheet.Problem;
 import com.chloe.workSheet.template.MulTemplate;
 import com.chloe.workSheet.template.Template;
 import com.chloe.util.Utility;
@@ -13,7 +14,7 @@ public class MulOperator extends Operator {
     }
 
     @Override
-    public String createWP() {
+    public Problem createWP() {
         setInformations();
 
         Template template = new MulTemplate();
@@ -33,11 +34,11 @@ public class MulOperator extends Operator {
             }
         }
 
-        return wordProblem;
+        return new Problem(wordProblem, this);
     }
 
     @Override
     public boolean isCorrect(double answer) {
-        return answer == (values[0] * values[1]);
+        return (int)answer == (values[0] * values[1]);
     }
 }
