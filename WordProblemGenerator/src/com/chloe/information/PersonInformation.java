@@ -16,7 +16,7 @@ public class PersonInformation extends Information{
     public void setInformation() {
         System.out.println(Utility.WRITE_PERSON + Utility.Q_MEAN);
 
-        informations.put("Person", inputInformation());
+        informations.put("Person", initInformation());
 
         if (component != null) component.setInformation();
     }

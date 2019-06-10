@@ -10,12 +10,6 @@ public class WorkSheet {
         this.workSheet.addAll(workSheet);
     }
 
-    public void solveWorkSheet() {
-        for(Problem problem: workSheet) {
-            problem.solve();
-        }
-    }
-
     public ArrayList<Problem> getWorkSheet() {
         return workSheet;
     }
@@ -24,6 +18,10 @@ public class WorkSheet {
         for(Problem problem: workSheet) {
             if (problem.isCorrect()) score++;
         }
+    }
+
+    public void setScore(int score) {
+        this.score = score;
     }
 
     public int getScore() {

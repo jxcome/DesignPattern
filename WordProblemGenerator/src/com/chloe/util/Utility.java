@@ -1,5 +1,8 @@
 package com.chloe.util;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Utility {
     public static final String Q_MEAN = "q 입력시 입력이 종료됩니다. \n";
     public static final String QUIT = "q";
@@ -8,6 +11,11 @@ public class Utility {
     public static final String WRITE_PRODUCT = "자녀에게 중요한 물품들을 입력하세요.\n";
 
     public static final String WRITE_ANWSER = "------------정답을 입력하세요----------\n";
+    public static final String ASK_MORE_WORKSHEET = "프로그램을 종료하겠습니까? Y/N\n";
+
+    public static final ArrayList<String> YES = new ArrayList<>(
+            Arrays.asList("Y", "y")
+    );
 
     public static final int SUM = 0;
     public static final int SUB = 1;

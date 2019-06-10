@@ -1,30 +1,26 @@
 package com.chloe;
 
-import com.chloe.information.Information;
-import com.chloe.information.PersonInformation;
-import com.chloe.information.ProductInformation;
-import com.chloe.workSheet.operator.Operator;
-import com.chloe.workSheet.operator.OperatorFactory;
 import com.chloe.util.Utility;
+
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        Information information = new PersonInformation(new ProductInformation());
-        information.setInformation();
+        boolean moreWorkSheet = true;
+        Scanner scanner = new Scanner(System.in);
 
-        OperatorFactory operatorFactory = new OperatorFactory(information);
+        Student student = new Student();
 
-        Operator operator1 = operatorFactory.createOperator(Utility.SUM);
-        System.out.println(operator1.createWP());
+        while(moreWorkSheet) {
+            // 진행
 
-        Operator operator2 = operatorFactory.createOperator(Utility.SUB);
-        System.out.println(operator2.createWP());
 
-        Operator operator3 = operatorFactory.createOperator(Utility.MUL);
-        System.out.println(operator3.createWP());
+            System.out.print(Utility.ASK_MORE_WORKSHEET);
+            String input = scanner.nextLine();
 
-        Operator operator4 = operatorFactory.createOperator(Utility.DIV);
-        System.out.println(operator4.createWP());
+            moreWorkSheet = Utility.YES.contains(input);
+
+        }
     }
 }

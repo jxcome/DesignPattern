@@ -14,7 +14,7 @@ public class ProductInformation extends Information{
     public void setInformation() {
         System.out.println(Utility.WRITE_PRODUCT + Utility.Q_MEAN);
 
-        informations.put("Product", inputInformation());
+        informations.put("Product", initInformation());
 
         if (component != null) component.setInformation();
     }

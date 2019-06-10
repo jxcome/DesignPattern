@@ -1,5 +1,6 @@
 package com.chloe.information;
 
+import com.chloe.display.ConsoleInterface;
 import com.chloe.util.Utility;
 
 import java.util.ArrayList;
@@ -12,8 +13,6 @@ public abstract class Information {
     HashMap<String, ArrayList<String>> informations = new HashMap<>();
 //    HashMap<String, String> randomInformation = new HashMap<>();
 
-    Scanner scanner = new Scanner(System.in);
-
     public abstract void setInformation();
 //    public abstract HashMap<String, String> getRandomInfomation();
 
@@ -25,17 +24,11 @@ public abstract class Information {
         return informations;
     }
 
-    ArrayList<String> inputInformation() {
-        String input = "init";
-        ArrayList<String> inputs = new ArrayList<>();
+    ArrayList<String> initInformation() {
+        ArrayList<String> input = ConsoleInterface.getInstance().getInformation();
 
-        while(true) {
-            input = scanner.nextLine();
-            if (input.equals(Utility.QUIT)) break;
-
-            inputs.add(input);
-        }
-
-        return inputs;
+        return input;
     }
+
+
 }

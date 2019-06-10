@@ -38,7 +38,6 @@ public class MulOperator extends Operator {
 
     @Override
     public boolean isCorrect(double answer) {
-        if (answer == (values[0] * values[1])) return true;
-        else return false;
+        return answer == (values[0] * values[1]);
     }
 }
